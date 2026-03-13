@@ -126,7 +126,7 @@ cv::VideoCapture cap(camera_id);  // camera_id 通常为 0
 
 ## 许可证
 
-本项目遵循相应的开源许可证。
+本项目遵循[MIT](LICENSE)开源许可证。
 
 ## 更新日志
 
