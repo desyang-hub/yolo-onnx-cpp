@@ -131,3 +131,14 @@ cv::VideoCapture cap(camera_id);  // camera_id 通常为 0
 ## 更新日志
 
 - 2026-03-13: 初始版本发布
+
+## GitHub Actions CI
+
+项目配置了GitHub Actions持续集成，在每次push和pull request到main分支时自动构建项目。CI工作流会：
+
+1. 检出代码
+2. 配置CMake
+3. 构建项目
+4. 运行测试（如果配置了）
+
+CI配置文件位于 `.github/workflows/cmake-single-platform.yml`
