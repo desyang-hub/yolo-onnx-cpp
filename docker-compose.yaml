@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  # C++ 应用程序服务
+  app:
+    build: .  # 使用当前目录的 Dockerfile 构建
+    image: yolo-onnx-cpp:latest  # <--- 手动指定名字！
+    
+    # 如果需要看实时日志，可以去掉 restart，或者保持默认
+    # restart: on-failure 
+    stdin_open: true # 保持标准输入打开
+    tty: true        # 分配伪终端，方便看彩色日志
+
+    volumes:
+      # 格式：宿主机路径:容器内路径
+      # 假设你的模型在本地 ./models 目录
+      - ./models:/app/models
+      - ./assets:/app/assets
